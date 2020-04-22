@@ -7,6 +7,8 @@ buildscript {
         rxandroid_version = '2.1.1'
         glide_version = '4.11.0'
         retrofit2_version = '2.3.0'
+        koin_version = '1.0.2'
+        rv_version = '1.1.0-alpha01'
     }
     repositories {
         google()
