@@ -1,7 +1,7 @@
 package net.soy.strawberry.model
 
 import io.reactivex.Single
-import net.soy.latestproject.network.KakaoSearchService
+import net.soy.strawberry.network.KakaoSearchService
 import net.soy.strawberry.enum.KakaoSearchSortEnum
 import net.soy.strawberry.network.model.ImageSearchResponse
 

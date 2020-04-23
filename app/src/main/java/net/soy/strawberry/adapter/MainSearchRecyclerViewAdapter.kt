@@ -2,14 +2,15 @@ package net.soy.strawberry.adapter
 
 import android.content.Intent
 import android.net.Uri
-import android.text.Layout
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
+import com.bumptech.glide.request.target.Target
+import com.bumptech.glide.request.target.Target.SIZE_ORIGINAL
 import kotlinx.android.synthetic.main.item_image_view_holder.view.*
 import net.soy.strawberry.R
+import net.soy.strawberry.widget.GlideApp
 
 class MainSearchRecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
@@ -23,6 +24,10 @@ class MainSearchRecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHold
         imageItemList.add(ImageItem(imageUrl, documentUrl))
     }
 
+    fun clearAddImageItem() {
+        imageItemList.clear()
+    }
+
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         (holder as? ImageHolder)?.onBind(imageItemList[position])
     }
@@ -34,7 +39,7 @@ class MainSearchRecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHold
     ) {
         fun onBind(item: ImageItem){
             itemView.run {
-                Glide.with(context).load(item.imageUrl).into(main_image_view)
+                GlideApp.with(context).load(item.imageUrl).centerCrop().override(SIZE_ORIGINAL).into(main_image_view)
                 main_image_view.setOnClickListener {
                     ContextCompat.startActivity(context, Intent(Intent.ACTION_VIEW, Uri.parse(item.documentUrl)), null)
                 }

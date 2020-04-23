@@ -8,7 +8,7 @@ import io.reactivex.schedulers.Schedulers
 import net.soy.strawberry.enum.KakaoSearchSortEnum
 import net.soy.strawberry.model.DataModel
 import net.soy.strawberry.network.model.ImageSearchResponse
-import net.soy.strawberry.viewmodel.base.BaseKtViewModel
+import net.soy.strawberry.base.BaseKtViewModel
 
 class MainViewModel(private val model: DataModel): BaseKtViewModel(){
 
@@ -21,7 +21,7 @@ class MainViewModel(private val model: DataModel): BaseKtViewModel(){
         get() = _imageSearchResponseLiveData
 
     fun getImageSearch(query: String, page: Int, size: Int){
-        addDisposable(model.getData(query, KakaoSearchSortEnum.Accuracy, page, size)
+        addDisposable(model.getData(query, KakaoSearchSortEnum.Recency, page, size)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({

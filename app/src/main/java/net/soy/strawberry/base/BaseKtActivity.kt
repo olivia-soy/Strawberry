@@ -1,10 +1,9 @@
-package net.soy.strawberry.view.base
+package net.soy.strawberry.base
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import net.soy.strawberry.viewmodel.base.BaseKtViewModel
 
 abstract class BaseKtActivity<T: ViewDataBinding, R : BaseKtViewModel> : AppCompatActivity() {
 

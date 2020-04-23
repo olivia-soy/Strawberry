@@ -8,12 +8,14 @@ buildscript {
         glide_version = '4.11.0'
         retrofit2_version = '2.3.0'
         koin_version = '1.0.2'
-        rv_version = '1.1.0-alpha01'
+        rv_version = '1.2.0-alpha02'
+        material_version = '1.2.0-alpha06'
+        lifecycle_compiler_version = '1.1.1'
+        glide_compiler_version = '4.10.0'
     }
     repositories {
         google()
         jcenter()
-        
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.3'

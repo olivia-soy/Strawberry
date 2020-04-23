@@ -1,4 +1,4 @@
-package net.soy.latestproject.network
+package net.soy.strawberry.network
 
 import io.reactivex.Single
 import net.soy.strawberry.network.model.ImageSearchResponse

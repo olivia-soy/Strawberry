@@ -1,4 +1,4 @@
-package net.soy.latestproject.network
+package net.soy.strawberry.network
 
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory

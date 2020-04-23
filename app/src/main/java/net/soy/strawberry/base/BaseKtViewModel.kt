@@ -1,4 +1,4 @@
-package net.soy.strawberry.viewmodel.base
+package net.soy.strawberry.base
 
 import androidx.lifecycle.ViewModel
 import io.reactivex.disposables.CompositeDisposable

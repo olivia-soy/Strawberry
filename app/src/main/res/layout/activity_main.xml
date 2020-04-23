@@ -8,13 +8,34 @@
         android:layout_height="match_parent"
         tools:context=".view.MainActivity">
 
-        <TextView
-            android:id="@+id/main_activity_search_text_view"
+        <LinearLayout
+            android:id="@+id/main_activity_search_linear_layout"
             android:layout_width="match_parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_height="60dp"/>
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_text_hint">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_input_edit_text_search"
+                    android:background="@color/cardview_light_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_search"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/button_text" />
+
+        </LinearLayout>
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
@@ -22,7 +43,7 @@
             android:id="@+id/main_activity_search_recycler_view"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/main_activity_search_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/main_activity_search_linear_layout"
             app:layout_constraintBottom_toBottomOf="parent"
             />
 

@@ -1,7 +1,7 @@
 package net.soy.strawberry.di
 
-import net.soy.latestproject.network.KakaoSearchService
-import net.soy.latestproject.network.RetrofitFactory
+import net.soy.strawberry.network.KakaoSearchService
+import net.soy.strawberry.network.RetrofitFactory
 import net.soy.strawberry.model.DataModel
 import net.soy.strawberry.model.DataModelImpl
 import net.soy.strawberry.adapter.MainSearchRecyclerViewAdapter
